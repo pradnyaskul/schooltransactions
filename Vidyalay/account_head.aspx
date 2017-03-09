@@ -9,7 +9,7 @@
             margin-top: 0px;
         }
         .auto-style32 {
-            text-align: right;
+            text-align: left;
         }
         .auto-style33 {
             text-align: right;
@@ -25,7 +25,12 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <table class="auto-style28" style="margin-left: 159px">
+    <table class="auto-style28" style="padding: 3px; margin-left: 184px; width: 449px; background-color: #EDEEFE;">
+        <tr>
+            <td class="auto-style32" colspan="5" style="background-color: #F4FDE1">
+                <asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Size="16pt" ForeColor="#0033CC" style="z-index: 1; left: 403px; top: 312px; position: absolute; width: 267px" Text="Account Head Master"></asp:Label>
+            </td>
+        </tr>
         <tr>
             <td class="auto-style32" colspan="2">&nbsp;</td>
             <td colspan="3">&nbsp;</td>
