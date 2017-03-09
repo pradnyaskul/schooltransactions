@@ -22,7 +22,7 @@
             height: 94px;
             width: 142px;
         }
-        .auto-style16 {
+        .auto-style16 {            height: 556px;
         }
         .auto-style18 {
             height: 94px;
@@ -39,22 +39,7 @@
         .auto-style28 {
             height: 33px;
         }
-        .auto-style29 {
-            height: 33px;
-            width: 167px;
-        }
-        .auto-style30 {
-            height: 33px;
-            width: 165px;
-        }
-        .auto-style31 {
-            height: 33px;
-            width: 181px;
-        }
-        .auto-style32 {
-            height: 33px;
-        }
-    </style>
+        </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -119,8 +104,8 @@
                          </p>
                          <p>
                          </p>
-                         <p>
-                         </p>
+                         <p style="text-align: right">
+                             अक्षयामृत इन्फोटेक प्रायव्हेट लिमिटेड, कोल्हापूर</p>
     </asp:ContentPlaceHolder>
                 </td>
             </tr>

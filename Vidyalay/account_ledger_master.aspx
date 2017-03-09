@@ -17,31 +17,45 @@
         .auto-style42 {
             width: 153px;
         }
-        .auto-style45 {
-            width: 140px;
-            height: 31px;
-        }
         .auto-style46 {
         }
-        .auto-style47 {
-            width: 142px;
-            height: 31px;
-        }
-        .auto-style48 {
-            width: 202px;
-            height: 31px;
-        }
-        .auto-style49 {
-            width: 109px;
-            height: 31px;
-        }
-        .auto-style50 {
-            width: 153px;
-            height: 31px;
-        }
-        .auto-style51 {
-            height: 31px;
-        }
+    .auto-style47 {
+        width: 142px;
+        height: 31px;
+    }
+    .auto-style48 {
+        width: 202px;
+        height: 31px;
+    }
+    .auto-style49 {
+        width: 109px;
+        height: 31px;
+    }
+    .auto-style50 {
+        width: 153px;
+        height: 31px;
+    }
+    .auto-style51 {
+        height: 31px;
+    }
+    .auto-style57 {
+        text-align: right;
+    }
+    .auto-style58 {
+        width: 132px;
+        text-align: center;
+    }
+    .auto-style63 {
+        width: 123px;
+        text-align: center;
+    }
+    .auto-style64 {
+        text-align: center;
+    }
+    .auto-style65 {
+        text-align: center;
+        width: 157px;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -54,7 +68,7 @@
             <tr>
                 <td class="auto-style41">अनुक्रमांक</td>
                 <td class="auto-style40">
-                    <asp:TextBox ID="TextBox1" runat="server" Height="17px" Width="167px"></asp:TextBox>
+                    <asp:TextBox ID="txtAnukramank" runat="server" Height="17px" Width="167px"></asp:TextBox>
                 </td>
                 <td class="auto-style38">&nbsp;</td>
                 <td class="auto-style42">&nbsp;</td>
@@ -65,11 +79,11 @@
             <tr>
                 <td class="auto-style41">खात्याचा प्रकार</td>
                 <td class="auto-style40">
-                    <asp:TextBox ID="TextBox3" runat="server" Width="166px"></asp:TextBox>
+                    <asp:TextBox ID="txtKhatyachaPrakar" runat="server" Width="166px"></asp:TextBox>
                 </td>
                 <td class="auto-style38">अकौंट ग्रुप</td>
                 <td class="auto-style42">
-                    <asp:DropDownList ID="DropDownList3" runat="server" Height="17px" Width="150px">
+                    <asp:DropDownList ID="cmbAccountGroup" runat="server" Height="17px" Width="150px">
                     </asp:DropDownList>
                 </td>
                 <td class="auto-style46">
@@ -83,11 +97,11 @@
             <tr>
                 <td class="auto-style47">आरंभी शिल्लक</td>
                 <td class="auto-style48">
-                    <asp:TextBox ID="TextBox4" runat="server" Width="166px"></asp:TextBox>
+                    <asp:TextBox ID="txtArambhiShillak" runat="server" Width="166px"></asp:TextBox>
                 </td>
                 <td class="auto-style49">खात्याचा प्रकार</td>
                 <td class="auto-style50">
-                    <asp:DropDownList ID="DropDownList1" runat="server" Height="16px" Width="153px">
+                    <asp:DropDownList ID="cmbKhatyachaPrakar" runat="server" Height="16px" Width="153px">
                     </asp:DropDownList>
                 </td>
                 <td class="auto-style51">
@@ -106,20 +120,39 @@
         <br />
     </p>
     <p style="width: 864px">
-        <asp:GridView ID="GridView1" runat="server" Width="782px">
+        <asp:GridView ID="GridView1" runat="server" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="782px">
         </asp:GridView>
     </p>
-    <p>
-    </p>
-    <p>
-    </p>
-    <p>
-    </p>
-    <p>
-    </p>
-    <p>
-    </p>
-    <p>
-    </p>
+<table class="auto-style33">
+    <tr>
+        <td class="auto-style64">
+            <asp:ImageButton ID="ImageButton2" runat="server" Height="24px" Width="97px" />
+            <br />
+            ADD</td>
+        <td class="auto-style64">
+            <asp:ImageButton ID="ImageButton4" runat="server" Height="24px" Width="97px" />
+            <br />
+            SAVE</td>
+        <td class="auto-style58">
+            <asp:ImageButton ID="ImageButton5" runat="server" Height="24px" Width="97px" />
+            <br />
+            MODIFY</td>
+        <td class="auto-style63">
+            <asp:ImageButton ID="ImageButton6" runat="server" Height="24px" Width="97px" />
+            <br />
+        </td>
+        <td class="auto-style65">
+            <asp:ImageButton ID="ImageButton8" runat="server" Height="24px" Width="97px" />
+            <br />
+            DELETE</td>
+        <td class="auto-style64">
+            <asp:ImageButton ID="ImageButton7" runat="server" Height="24px" Width="97px" />
+            <br />
+            EXIT</td>
+    </tr>
+    <tr>
+        <td class="auto-style57" colspan="5">अक्षयामृत इन्फोटेक प्रायव्हेट लिमिटेड, कोल्हापूर </td>
+    </tr>
+</table>
 </asp:Content>
 
