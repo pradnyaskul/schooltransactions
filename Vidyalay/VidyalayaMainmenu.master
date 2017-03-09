@@ -1,0 +1,132 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="VidyalayaMainmenu.master.cs" Inherits="VidyalayaMainmenu" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style5 {
+            width: 100%;
+            height: 694px;
+        }
+        .auto-style6 {
+            width: 199px;
+        }
+        .auto-style7 {
+            height: 94px;
+        }
+        .auto-style15 {
+            height: 94px;
+            width: 142px;
+        }
+        .auto-style16 {
+        }
+        .auto-style18 {
+            height: 94px;
+            width: 167px;
+        }
+        .auto-style24 {
+            height: 94px;
+            width: 165px;
+        }
+        .auto-style27 {
+            height: 94px;
+            width: 181px;
+        }
+        .auto-style28 {
+            height: 33px;
+        }
+        .auto-style29 {
+            height: 33px;
+            width: 167px;
+        }
+        .auto-style30 {
+            height: 33px;
+            width: 165px;
+        }
+        .auto-style31 {
+            height: 33px;
+            width: 181px;
+        }
+        .auto-style32 {
+            height: 33px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+        <table class="auto-style5">
+            <tr>
+                <td class="auto-style6" rowspan="3" style="background-color: #040055">
+                    <asp:TreeView ID="TreeView1" runat="server" Font-Size="16pt" ForeColor="#CCFFFF" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged" style="z-index: 1; left: 12px; top: 159px; position: absolute; height: 241px; width: 191px" ShowLines="True" SkipLinkText="">
+                        <Nodes>
+                            <asp:TreeNode Text="School Account" Value="School Account"></asp:TreeNode>
+                            <asp:TreeNode Text="Computer Account" Value="Computer Account"></asp:TreeNode>
+                            <asp:TreeNode Text="Jr Main Account" Value="Jr Main Account"></asp:TreeNode>
+                            <asp:TreeNode Text="Term Account" Value="Term Account"></asp:TreeNode>
+                            <asp:TreeNode Text="Source ⁯Id Account" Value="Source ⁯Id Account"></asp:TreeNode>
+                        </Nodes>
+                        <NodeStyle HorizontalPadding="5px" VerticalPadding="12px" />
+                        <SelectedNodeStyle BackColor="#6699FF" BorderStyle="None" />
+                    </asp:TreeView>
+                    <asp:Label ID="Label1" runat="server" BackColor="#000099" BorderColor="Blue" BorderStyle="Groove" Font-Bold="True" Font-Size="14pt" ForeColor="#99FFCC" style="z-index: 1; left: 14px; top: 97px; position: absolute; width: 188px; height: 44px; text-align: center" Text="Select Account Name"></asp:Label>
+                </td>
+                <td class="auto-style28" style="background-color: #C0C0C0; text-align: right;" colspan="5">
+                    <asp:ImageButton ID="ImageButton1" runat="server"   ImageUrl="~/Images/Cute-Ball-Shutdown-icon.png" style="z-index: 1; left: 1026px; top: 17px;   text-align: right;" Height="36px" />
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style15" style="background-color: #CCCCCC" >
+                    <asp:Button ID="Button1" runat="server" BackColor="#489191" BorderColor="#CCCCFF" Font-Size="16pt" style="z-index: 1; left: 216px; top: 56px; position: absolute; height: 94px; width: 141px; text-align: right; right: 716px" Text="Master" />
+                </td>
+                <td class="auto-style18" style="background-color: #CCCCCC"></td>
+                <td class="auto-style24" style="background-color: #CCCCCC"></td>
+                <td class="auto-style27" style="background-color: #CCCCCC"></td>
+                <td class="auto-style7" style="background-color: #CCCCCC"></td>
+            </tr>
+            <tr>
+                <td class="auto-style16" colspan="5">
+                     <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                         <p>
+                             <br />
+                         </p>
+                         <p>
+                         </p>
+                         <p>
+                         </p>
+                         <p>
+                         </p>
+                         <p>
+                         </p>
+                         <p>
+                         </p>
+                         <p>
+                         </p>
+                         <p>
+                         </p>
+                         <p>
+                         </p>
+                         <p>
+                         </p>
+                         <p>
+                         </p>
+                         <p>
+                         </p>
+                         <p>
+                         </p>
+                         <p>
+                         </p>
+    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            </table>
+        
+    </div>
+    </form>
+</body>
+</html>
