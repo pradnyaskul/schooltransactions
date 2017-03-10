@@ -139,12 +139,12 @@
             <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
             <AlternatingRowStyle BackColor="#BFE4FF" />
             <Columns>
-                <asp:BoundField DataField="  " HeaderText="अनुक्रमांक" ItemStyle-Width="100" />
-                <asp:BoundField DataField=" " HeaderText="खात्याचे नाव" ItemStyle-Width="250" />
-                <asp:BoundField DataField=" " HeaderText="ग्रुपचे नाव " ItemStyle-Width="200" />
-                <asp:BoundField DataField=" " HeaderText="आरंभी शिल्लक" ItemStyle-Width="250" />
-                <asp:BoundField DataField=" " HeaderText="जमा/नावे" ItemStyle-Width="150" />
-                <asp:BoundField DataField=" " HeaderText="खात्याचा प्रकार " ItemStyle-Width="200" />
+                <asp:BoundField  HeaderText="अनुक्रमांक" ItemStyle-Width="80" ItemStyle-Height="30"/>
+                <asp:BoundField HeaderText="खात्याचे नाव" ItemStyle-Width="270"  ItemStyle-Height="30"/>
+                <asp:BoundField HeaderText="ग्रुपचे नाव " ItemStyle-Width="200" ItemStyle-Height="30" />
+                <asp:BoundField HeaderText="आरंभी शिल्लक" ItemStyle-Width="230" ItemStyle-Height="30" />
+                <asp:BoundField HeaderText="जमा/नावे" ItemStyle-Width="100" ItemStyle-Height="30"/>
+                <asp:BoundField HeaderText="खात्याचा प्रकार " ItemStyle-Width="150" ItemStyle-Height="30"/>
                 
                  
             </Columns>

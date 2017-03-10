@@ -7,8 +7,10 @@
         }
         .auto-style30 {
             height: 23px;
+            width: 750px;
         }
         .auto-style32 {
+            width: 750px;
         }
         .auto-style37 {
             width: 100%;
@@ -26,6 +28,7 @@
         }
         .auto-style40 {
             height: 30px;
+            width: 750px;
         }
     </style>
 </asp:Content>
@@ -35,7 +38,7 @@
             <td class="auto-style30" style="font-size: x-large; font-weight: bold; color: #FFFFFF; text-decoration: underline; text-align: center; background-color: #A8A8A8;">Account Group Master</td>
         </tr>
         <tr>
-            <td class="auto-style40" style="background-color: #B5E8E8;">अनुक्रमांक&nbsp;&nbsp;&nbsp; <asp:TextBox ID="txtAnukramank" runat="server" Width="160px"></asp:TextBox>
+            <td class="auto-style40" style="background-color: #B5E8E8;">अनुक्रमांक&nbsp;&nbsp;&nbsp; <asp:TextBox ID="txtAnukramank" runat="server" Height="25px" Width="174px"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" ForeColor="Red" runat="server" ErrorMessage="अनुक्रमांक टाका" ControlToValidate="txtAnukramank">*</asp:RequiredFieldValidator>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:CheckBox ID="chbPotKhate" runat="server" Text="जमा/खर्च पत्रकात पोटखाती दाखवायची का?" />
@@ -43,25 +46,24 @@
         </tr>
         <tr>
             <td class="auto-style30" style="background-color: #B5E8E8;">ग्रुपचे नाव&nbsp;&nbsp;&nbsp;
-                <asp:TextBox ID="txtGrupcheNaav" runat="server" Width="160px"></asp:TextBox>
+                <asp:TextBox ID="txtGrupcheNaav" runat="server" Width="180px" Height="25px"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator2" ForeColor="Red" runat="server" ErrorMessage="ग्रुपचे नाव टाका" ControlToValidate="txtGrupcheNaav">*</asp:RequiredFieldValidator>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ग्रुप नं&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:TextBox ID="txtgroupno" runat="server" Width="140px"></asp:TextBox>
+                <asp:TextBox ID="txtgroupno" runat="server" Height="25px" Width="140px"></asp:TextBox>
             &nbsp; <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ForeColor="Red" runat="server" ErrorMessage="ग्रुप नंबर टाका" ControlToValidate="txtgroupno">*</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
             <td class="auto-style32">
-                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" Height="250px" style="margin-top: 0px">
+                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" Height="250px" style="margin-top: 0px" Width="788px">
             <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
             <AlternatingRowStyle BackColor="#BFE4FF" />
             <Columns>
-                <asp:BoundField DataField="  " HeaderText="अनुक्रमांक" ItemStyle-Width="100" />
-                <asp:BoundField DataField=" " HeaderText="खात्याचे नाव" ItemStyle-Width="250" />
-                <asp:BoundField DataField=" " HeaderText="ग्रुपचे नाव " ItemStyle-Width="200" />
-                <asp:BoundField DataField=" " HeaderText="आरंभी शिल्लक" ItemStyle-Width="250" />
-                <asp:BoundField DataField=" " HeaderText="जमा/नावे" ItemStyle-Width="150" />
-                <asp:BoundField DataField=" " HeaderText="खात्याचा प्रकार " ItemStyle-Width="200" />
+                <asp:BoundField HeaderText="अनुक्रमांक" ItemStyle-Width="60" ItemStyle-Height="30"/>
+                <asp:BoundField HeaderText="ग्रुप" ItemStyle-Width="230"  ItemStyle-Height="30"/>
+                <asp:BoundField HeaderText="ग्रुप नंबर  " ItemStyle-Width="130" ItemStyle-Height="30" />
+                <asp:BoundField HeaderText="पोटखाती दाखवणे" ItemStyle-Width="150" ItemStyle-Height="30" />
+                
                 
                  
             </Columns>
@@ -70,7 +72,7 @@
 
         </tr>
         <tr>
-            <td>
+            <td class="auto-style32">
                 <table class="auto-style37">
                     <tr>
                         <td class="auto-style39">
