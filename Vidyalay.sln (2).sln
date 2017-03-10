@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Vidyalay", "Vidyalay\", "{8A1EDAA7-91A0-4DC4-88ED-38F28BF5CF19}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
+		Debug.AspNetCompiler.VirtualPath = "/Vidyalay"
+		Debug.AspNetCompiler.PhysicalPath = "D:\Pradnya\SchoolTransactions\trunk\Vidyalay\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Vidyalay\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Vidyalay"
+		Release.AspNetCompiler.PhysicalPath = "D:\Pradnya\SchoolTransactions\trunk\Vidyalay\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Vidyalay\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1098"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A1EDAA7-91A0-4DC4-88ED-38F28BF5CF19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A1EDAA7-91A0-4DC4-88ED-38F28BF5CF19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

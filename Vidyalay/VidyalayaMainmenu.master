@@ -13,7 +13,7 @@
             height: 694px;
         }
         .auto-style6 {
-            width: 199px;
+            width: 196px;
         }
         .auto-style7 {
             height: 94px;
@@ -66,17 +66,36 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style15" style="background-color: #CCCCCC" >
-                    <asp:Button ID="Button1" runat="server" BackColor="#489191" BorderColor="#CCCCFF" Font-Size="16pt" style="z-index: 1; left: 216px; top: 56px; position: absolute; height: 94px; width: 141px; text-align: right; right: 716px" Text="Master" />
+                <td class="auto-style15" style="background-color: #008080; text-align: left;"   >
+                    <asp:ImageButton ID="ImageButton2" runat="server" Height="38px" ImageUrl="~/Images/General Register.png" style="margin-left: 35px; margin-top: 10px" Width="63px" />
+                    <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Label ID="Label2" runat="server" Text="Master" Font-Bold="True" Font-Size="16pt" ForeColor="White" style="text-align: center"></asp:Label>
                 </td>
-                <td class="auto-style18" style="background-color: #CCCCCC"></td>
-                <td class="auto-style24" style="background-color: #CCCCCC"></td>
-                <td class="auto-style27" style="background-color: #CCCCCC"></td>
-                <td class="auto-style7" style="background-color: #CCCCCC"></td>
+                <td class="auto-style18" style="background-color: #37006F">
+                    <style type="text/css">
+    .submit {
+        border: 1px solid #563d7c;
+        border-radius: 5px;
+        color: white;
+        padding: 5px 10px 5px 25px;
+        background: url(https://i.stack.imgur.com/jDCI4.png) 
+            left 3px top 5px no-repeat #563d7c;
+    }
+</style>
+
+                    &nbsp;</td>
+                <td class="auto-style24" style="background-color: #D76B00"></td>
+                <td class="auto-style27" style="background-color: #0080FF"></td>
+                <td class="auto-style7" style="background-color: #400000"></td>
             </tr>
             <tr>
                 <td class="auto-style16" colspan="5">
                      <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                         <p>
+
+<asp:Button runat="server" ID="Button2" Text="Submit" CssClass="submit" Height="33px" Width="128px" />
+                         </p>
                          <p>
                              <br />
                          </p>

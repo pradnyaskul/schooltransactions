@@ -120,7 +120,7 @@
         <br />
     </p>
     <p style="width: 864px">
-        <asp:GridView ID="GridView1" runat="server" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" Width="782px">
+        <asp:GridView ID="GridView1" runat="server"   Width="782px">
         </asp:GridView>
     </p>
 <table class="auto-style33">

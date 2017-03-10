@@ -2,12 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
-        .auto-style31 {
-            width: 46%;
-            height: 425px;
-            margin-left: 167px;
-            margin-top: 0px;
-        }
         .auto-style32 {
             text-align: left;
         }
@@ -22,13 +16,20 @@
             text-align: right;
             height: 14px;
         }
+    .auto-style37 {
+        text-align: left;
+        height: 44px;
+    }
+    .auto-style38 {
+        text-align: right;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <table class="auto-style28" style="padding: 3px; margin-left: 184px; width: 449px; background-color: #EDEEFE;">
+    <table class="auto-style28" style="padding: 3px; margin-left: 184px; width: 443px; background-color: #EDEEFE;">
         <tr>
-            <td class="auto-style32" colspan="5" style="background-color: #F4FDE1">
-                <asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Size="16pt" ForeColor="#0033CC" style="z-index: 1; left: 403px; top: 312px; position: absolute; width: 267px" Text="Account Head Master"></asp:Label>
+            <td class="auto-style37" colspan="5" style="background-color: #F4FDE1">
+                <asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Size="16pt" ForeColor="#0033CC" style="z-index: 1; left: 404px; top: 271px; position: absolute; width: 267px" Text="Account Head Master"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -36,19 +37,19 @@
             <td colspan="3">&nbsp;</td>
         </tr>
         <tr>
-            <td class="auto-style32" colspan="2">
+            <td class="auto-style38" colspan="2">
                 <asp:Label ID="Label2" runat="server" style="text-align: right" Text="Account Head No."></asp:Label>
             </td>
             <td colspan="3">
-                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtid" runat="server"></asp:TextBox>
             </td>
         </tr>
         <tr>
-            <td class="auto-style32" colspan="2">
+            <td class="auto-style38" colspan="2">
                 <asp:Label ID="Label3" runat="server" style="text-align: right" Text="Account Head Name"></asp:Label>
             </td>
             <td colspan="3">
-                <asp:TextBox ID="TextBox2" runat="server" Height="24px" style="margin-top: 0px" Width="210px"></asp:TextBox>
+                <asp:TextBox ID="txtrname" runat="server" Height="24px" style="margin-top: 0px" Width="210px"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -59,21 +60,22 @@
             <td class="auto-style33">
             </td>
             <td class="auto-style33">
-                <asp:Button ID="Button6" runat="server" style="z-index: 1;  " Text="New" Width="71px" />
+                <asp:Button ID="btnnew" runat="server" style="z-index: 1;  " Text="New" Width="71px" OnClick="Button6_Click" />
                 </td>
             <td class="auto-style33">
-                <asp:Button ID="Button8" runat="server" style="z-index: 1;   right: 385px; margin-left: 0px;" Text="Save" Width="64px" />
+                <asp:Button ID="btnSave" runat="server" style="z-index: 1;   right: 385px; margin-left: 0px;" Text="Save" Width="64px" />
                 </td>
             <td class="auto-style33">
-                <asp:Button ID="Button7" runat="server" style="z-index: 1;     " Text="Modify" Width="67px" />
+                <asp:Button ID="btnupdate" runat="server" style="z-index: 1;     " Text="Modify" Width="67px" />
             </td>
             <td class="auto-style33">
-                <asp:Button ID="Button9" runat="server" style="z-index: 1; margin-left: 0px;"    Text="Return" OnClick="Button9_Click" Width="67px" />
+                <asp:Button ID="btnDelete" runat="server" style="z-index: 1; margin-left: 0px;"    Text="Delete"   Width="67px" />
             </td>
         </tr>
         <tr>
-            <td class="auto-style32" colspan="2"></td>
-            <td colspan="3">
+            <td class="auto-style32" colspan="5">
+                <asp:GridView ID="GridView1" runat="server" style="z-index: 1; left: 409px; top: 529px;   " Width="443px">
+                </asp:GridView>
             </td>
         </tr>
     </table>
