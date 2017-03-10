@@ -29,7 +29,7 @@
     <table class="auto-style28" style="padding: 3px; margin-left: 184px; width: 443px; background-color: #EDEEFE;">
         <tr>
             <td class="auto-style37" colspan="5" style="background-color: #F4FDE1">
-                <asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Size="16pt" ForeColor="#0033CC" style="z-index: 1; left: 404px; top: 271px; position: absolute; width: 267px" Text="Account Head Master"></asp:Label>
+                <asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Size="16pt" ForeColor="#0033CC" style="z-index: 1; left: 404px; top: 271px;  width: 267px" Text="Account Head Master"></asp:Label>
             </td>
         </tr>
         <tr>
@@ -63,18 +63,23 @@
                 <asp:Button ID="btnnew" runat="server" style="z-index: 1;  " Text="New" Width="71px" OnClick="Button6_Click" />
                 </td>
             <td class="auto-style33">
-                <asp:Button ID="btnSave" runat="server" style="z-index: 1;   right: 385px; margin-left: 0px;" Text="Save" Width="64px" />
+                <asp:Button ID="btnSave" runat="server" style="z-index: 1;   right: 385px; margin-left: 0px;" Text="Save" Width="64px" OnClick="btnSave_Click1" />
                 </td>
             <td class="auto-style33">
-                <asp:Button ID="btnupdate" runat="server" style="z-index: 1;     " Text="Modify" Width="67px" />
+                <asp:Button ID="btnupdate" runat="server" style="z-index: 1;     " Text="Modify" Width="67px" OnClick="btnupdate_Click1" />
             </td>
             <td class="auto-style33">
-                <asp:Button ID="btnDelete" runat="server" style="z-index: 1; margin-left: 0px;"    Text="Delete"   Width="67px" />
+                <asp:Button ID="btnDelete" runat="server" style="z-index: 1; margin-left: 0px;"    Text="Delete"   Width="67px" OnClick="btnDelete_Click1" />
             </td>
         </tr>
         <tr>
             <td class="auto-style32" colspan="5">
-                <asp:GridView ID="GridView1" runat="server" style="z-index: 1; left: 409px; top: 529px;   " Width="443px">
+                <asp:GridView ID="GridView1" runat="server" style="z-index: 1; left: 409px; top: 529px;   " Width="443px" AutoGenerateColumns="False">
+                    <Columns>
+                        <asp:CommandField ShowSelectButton="True" />
+                        <asp:BoundField DataField="account_head_id" HeaderText="Account head ID" />
+                        <asp:BoundField DataField="account_head_name" HeaderText="account_head_name" />
+                    </Columns>
                 </asp:GridView>
             </td>
         </tr>

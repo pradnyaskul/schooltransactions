@@ -14,6 +14,8 @@ public class clsconnection
         MySqlCommand cmd;
         MySqlDataAdapter da;
         DataSet ds;
+        int fontid, schoolid,schdeptid;
+        string crloginid, mdloginid;
         public clsconnection()
         {
             string server = "192.168.1.222";
@@ -23,6 +25,32 @@ public class clsconnection
             string connstr = "SERVER =" + server + "; DATABASE =" + database + "; UID =" + uid + "; PASSWORD = " + Passward;
             con = new MySqlConnection(connstr);
 
+        }
+
+        public int font_id
+        {
+            get { return fontid; }
+            set { fontid = value; }
+        }
+        public int school_id
+        {
+            get { return schoolid; }
+            set { schoolid = value; }
+        }
+        public int school_dept_id
+        {
+            get { return schdeptid; }
+            set { schdeptid = value; }
+        }
+        public string create_login_id
+        {
+            get { return crloginid; }
+            set { crloginid = value; }
+        }
+        public string modify_login_id
+        {
+            get { return mdloginid; }
+            set { mdloginid = value; }
         }
         public void open()
         {
