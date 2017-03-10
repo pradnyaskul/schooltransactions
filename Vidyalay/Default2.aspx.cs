@@ -11,12 +11,4 @@ public partial class Default2 : System.Web.UI.Page
     {
 
     }
-    protected void RadioButtonList2_SelectedIndexChanged(object sender, EventArgs e)
-    {
-
-    }
-    protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-    {
-
-    }
 }
