@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/VidyalayaMainmenu.master" AutoEventWireup="true" CodeFile="account_ledger_master.aspx.cs" Inherits="Default2" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/VidyalayaMainmenu.master" AutoEventWireup="true" CodeFile="account_Ledger_master.aspx.cs" Inherits="Default2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
@@ -61,6 +61,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <asp:Panel ID="Panel1" runat="server" BackColor="#B5E8E8" Height="173px">
         <br />
+        <table class="auto-style33">
+            <tr>
+                <td style="font-size: x-large; font-weight: bold; color: #FFFFFF; text-decoration: underline; text-align: center; background-color: #A8A8A8;">Ledger Master</td>
+            </tr>
+        </table>
         <br />
         &nbsp;&nbsp;&nbsp;
         <br />
@@ -73,7 +78,7 @@
                 <td class="auto-style38">&nbsp;</td>
                 <td class="auto-style42">&nbsp;</td>
                 <td class="auto-style46">
-                    <asp:CheckBox ID="CheckBox1" runat="server" Text="Vertical Day-Book" />
+                    <asp:CheckBox ID="chbVerticalDayBook" runat="server" Text="Vertical Day-Book" />
                 </td>
             </tr>
             <tr>
@@ -87,7 +92,7 @@
                     </asp:DropDownList>
                 </td>
                 <td class="auto-style46">
-                    <asp:RadioButtonList ID="RadioButtonList1" RepeatDirection="Horizontal" runat="server" Width="228px">
+                    <asp:RadioButtonList ID="rdbListtakke" RepeatDirection="Horizontal" runat="server" Width="228px">
                         <asp:ListItem>३०%</asp:ListItem>
                         <asp:ListItem>७०%</asp:ListItem>
                         <asp:ListItem>१००%</asp:ListItem>
@@ -95,20 +100,19 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style47">आरंभी शिल्लक</td>
-                <td class="auto-style48">
+                <td class="auto-style47" style="background-color: #B5E8E8">आरंभी शिल्लक</td>
+                <td class="auto-style48" style="background-color: #B5E8E8">
                     <asp:TextBox ID="txtArambhiShillak" runat="server" Width="166px"></asp:TextBox>
                 </td>
-                <td class="auto-style49">खात्याचा प्रकार</td>
-                <td class="auto-style50">
+                <td class="auto-style49" style="background-color: #B5E8E8">खात्याचा प्रकार</td>
+                <td class="auto-style50" style="background-color: #B5E8E8">
                     <asp:DropDownList ID="cmbKhatyachaPrakar" runat="server" Height="16px" Width="153px">
                     </asp:DropDownList>
                 </td>
-                <td class="auto-style51">
-                    <asp:RadioButtonList ID="RadioButtonList2" runat="server" RepeatDirection="Horizontal" Width="228px">
-                        <asp:ListItem>३०%</asp:ListItem>
-                        <asp:ListItem>७०%</asp:ListItem>
-                        <asp:ListItem>१००%</asp:ListItem>
+                <td class="auto-style51" style="background-color: #B5E8E8">
+                    <asp:RadioButtonList ID="rdbListjamanave" runat="server" RepeatDirection="Horizontal" Width="165px">
+                        <asp:ListItem>जमा</asp:ListItem>
+                        <asp:ListItem>नावे</asp:ListItem>
                     </asp:RadioButtonList>
                 </td>
             </tr>
@@ -120,7 +124,19 @@
         <br />
     </p>
     <p style="width: 864px">
-        <asp:GridView ID="GridView1" runat="server"   Width="782px">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" Height="250px">
+            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+            <AlternatingRowStyle BackColor="#BFE4FF" />
+            <Columns>
+                <asp:BoundField DataField="  " HeaderText="अनुक्रमांक" ItemStyle-Width="100" />
+                <asp:BoundField DataField=" " HeaderText="खात्याचे नाव" ItemStyle-Width="250" />
+                <asp:BoundField DataField=" " HeaderText="ग्रुपचे नाव " ItemStyle-Width="200" />
+                <asp:BoundField DataField=" " HeaderText="आरंभी शिल्लक" ItemStyle-Width="250" />
+                <asp:BoundField DataField=" " HeaderText="जमा/नावे" ItemStyle-Width="150" />
+                <asp:BoundField DataField=" " HeaderText="खात्याचा प्रकार " ItemStyle-Width="200" />
+                
+                 
+            </Columns>
         </asp:GridView>
     </p>
 <table class="auto-style33">
