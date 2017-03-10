@@ -47,7 +47,7 @@
         
         <table class="auto-style5">
             <tr>
-                <td class="auto-style6" rowspan="3" style="background-color: #040055">
+                <td class="auto-style6" rowspan="3" style="background-color: #FFA953">
                     <asp:TreeView ID="TreeView1" runat="server" Font-Size="16pt" ForeColor="#CCFFFF" OnSelectedNodeChanged="TreeView1_SelectedNodeChanged" style="z-index: 1; left: 12px; top: 159px; position: absolute; height: 241px; width: 191px" ShowLines="True" SkipLinkText="">
                         <Nodes>
                             <asp:TreeNode Text="School Account" Value="School Account"></asp:TreeNode>
@@ -94,37 +94,12 @@
                      <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
                          <p>
 
-<asp:Button runat="server" ID="Button2" Text="Submit" CssClass="submit" Height="33px" Width="128px" />
-                         </p>
+                             &nbsp;</p>
                          <p>
-                             <br />
-                         </p>
-                         <p>
-                         </p>
-                         <p>
-                         </p>
-                         <p>
-                         </p>
-                         <p>
-                         </p>
-                         <p>
-                         </p>
-                         <p>
-                         </p>
-                         <p>
-                         </p>
-                         <p>
-                         </p>
-                         <p>
-                         </p>
-                         <p>
-                         </p>
-                         <p>
-                         </p>
-                         <p>
-                         </p>
+                             &nbsp;</p>
+                         
                          <p style="text-align: right">
-                             अक्षयामृत इन्फोटेक प्रायव्हेट लिमिटेड, कोल्हापूर</p>
+                             अक्षयामृत इन्फोटेक, कोल्हापूर</p>
     </asp:ContentPlaceHolder>
                 </td>
             </tr>

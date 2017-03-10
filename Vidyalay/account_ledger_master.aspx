@@ -28,11 +28,11 @@
         height: 31px;
     }
     .auto-style49 {
-        width: 109px;
+        width: 74px;
         height: 31px;
     }
     .auto-style50 {
-        width: 153px;
+        width: 192px;
         height: 31px;
     }
     .auto-style51 {
@@ -56,6 +56,12 @@
         text-align: center;
         width: 157px;
     }
+    .auto-style66 {
+        width: 74px;
+    }
+    .auto-style67 {
+        width: 192px;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -74,9 +80,10 @@
                 <td class="auto-style41">अनुक्रमांक</td>
                 <td class="auto-style40">
                     <asp:TextBox ID="txtAnukramank" runat="server" Height="17px" Width="167px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtAnukramank" ErrorMessage="अनुक्रमांक टाका" ForeColor="Red">*</asp:RequiredFieldValidator>
                 </td>
-                <td class="auto-style38">&nbsp;</td>
-                <td class="auto-style42">&nbsp;</td>
+                <td class="auto-style66">&nbsp;</td>
+                <td class="auto-style67">&nbsp;</td>
                 <td class="auto-style46">
                     <asp:CheckBox ID="chbVerticalDayBook" runat="server" Text="Vertical Day-Book" />
                 </td>
@@ -85,11 +92,13 @@
                 <td class="auto-style41">खात्याचा प्रकार</td>
                 <td class="auto-style40">
                     <asp:TextBox ID="txtKhatyachaPrakar" runat="server" Width="166px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="cmbKhatyachaPrakar" ErrorMessage="खात्याचा प्रकार लिहा" ForeColor="#FF3300">*</asp:RequiredFieldValidator>
                 </td>
-                <td class="auto-style38">अकौंट ग्रुप</td>
-                <td class="auto-style42">
+                <td class="auto-style66">अकौंट ग्रुप</td>
+                <td class="auto-style67">
                     <asp:DropDownList ID="cmbAccountGroup" runat="server" Height="17px" Width="150px">
                     </asp:DropDownList>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="अकौंट ग्रुप सिलेक्ट करा" ForeColor="Red">*</asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style46">
                     <asp:RadioButtonList ID="rdbListtakke" RepeatDirection="Horizontal" runat="server" Width="228px">
@@ -103,11 +112,13 @@
                 <td class="auto-style47" style="background-color: #B5E8E8">आरंभी शिल्लक</td>
                 <td class="auto-style48" style="background-color: #B5E8E8">
                     <asp:TextBox ID="txtArambhiShillak" runat="server" Width="166px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtArambhiShillak" ErrorMessage="आरंभी शिल्लक लिहा" ForeColor="Red">*</asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style49" style="background-color: #B5E8E8">खात्याचा प्रकार</td>
                 <td class="auto-style50" style="background-color: #B5E8E8">
                     <asp:DropDownList ID="cmbKhatyachaPrakar" runat="server" Height="16px" Width="153px">
                     </asp:DropDownList>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtKhatyachaPrakar" ErrorMessage="खात्याचा प्रकार निवडा" ForeColor="#FF3300">*</asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style51" style="background-color: #B5E8E8">
                     <asp:RadioButtonList ID="rdbListjamanave" runat="server" RepeatDirection="Horizontal" Width="165px">
@@ -124,7 +135,7 @@
         <br />
     </p>
     <p style="width: 864px">
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" Height="250px">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" Height="250px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged1">
             <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
             <AlternatingRowStyle BackColor="#BFE4FF" />
             <Columns>
