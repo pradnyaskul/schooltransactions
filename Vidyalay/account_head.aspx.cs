@@ -15,13 +15,16 @@ public partial class Default2 : System.Web.UI.Page
      account_head_cls accheadobj = new  account_head_cls();
     protected void Page_Load(object sender, EventArgs e)
     {
-        LoadGrid();
+        if (!IsPostBack)
+        {
+            LoadGrid();
+        }
     }
 
     private void LoadGrid()
     {
 
-        string sql = "Select account_head_id,account_head_name from account_head";
+        string sql = "Select account_head_id,account_head_name   from account_head";
          
         ds = cn.Getresult(sql, "account_head");
         if (ds.Tables.Count > 0)
@@ -68,11 +71,12 @@ public partial class Default2 : System.Web.UI.Page
     {
         accheadobj.Acc_head_id = Convert.ToInt32(txtid.Text);
         accheadobj.Acc_head_name = txtrname.Text;
-        cn.school_id = 1;
-        cn.school_dept_id = 1;
-        cn.font_id = 1;
-        cn.modify_login_id = "";
-        cn.create_login_id = "";
+        clsconnection.school_id = 1;
+        clsconnection.school_dept_id = 1;
+        clsconnection.font_id = 1;
+        clsconnection.modify_login_id = "";
+        clsconnection.create_login_id = "";
+         
         accheadobj.saverecord();
         LoadGrid();
     }
@@ -80,11 +84,11 @@ public partial class Default2 : System.Web.UI.Page
     {
         accheadobj.Acc_head_id = Convert.ToInt32(txtid.Text);
         accheadobj.Acc_head_name = txtrname.Text;
-        cn.school_id = 1;
-        cn.school_dept_id = 1;
-        cn.font_id = 1;
-        cn.modify_login_id = "";
-        cn.create_login_id = "";
+        clsconnection.school_id = 1;
+        clsconnection.school_dept_id = 1;
+        clsconnection.font_id = 1;
+        clsconnection.modify_login_id = "";
+        clsconnection.create_login_id = "";
         accheadobj.updaterecord();
         LoadGrid();
     }
@@ -93,5 +97,10 @@ public partial class Default2 : System.Web.UI.Page
           accheadobj.Acc_head_id = Convert.ToInt32(txtid.Text);
         accheadobj.deleterecord();
         LoadGrid();
+    }
+    protected void GridView1_SelectedIndexChanged1(object sender, EventArgs e)
+    {
+        txtid.Text = GridView1.SelectedRow.Cells[1].Text;
+        txtrname.Text = GridView1.SelectedRow.Cells[2].Text;
     }
 }
