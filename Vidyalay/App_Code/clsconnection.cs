@@ -14,7 +14,7 @@ public class clsconnection
         MySqlCommand cmd;
         MySqlDataAdapter da;
         DataSet ds;
-        public static int fontid, schoolid,schdeptid;
+        public static int fontid, schoolid,schdeptid,mainaccgrid;
         public static string crloginid, mdloginid;
         public clsconnection()
         {
@@ -36,6 +36,11 @@ public class clsconnection
         {
             get { return schoolid; }
             set { schoolid = value; }
+        }
+        public static int main_account_groupid
+        {
+            get { return mainaccgrid; }
+            set { mainaccgrid = value; }
         }
         public static int school_dept_id
         {
