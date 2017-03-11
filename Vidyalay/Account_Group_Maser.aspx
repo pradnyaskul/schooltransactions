@@ -55,9 +55,8 @@
         </tr>
         <tr>
             <td class="auto-style30" style="background-color: #B5E8E8;">मुख्य ग्रुप निवडा&nbsp;
-                <asp:DropDownList ID="cmbMukhyaGrup" runat="server" Width="189px">
+                <asp:DropDownList ID="cmbMukhyaGrup" runat="server" Width="189px" Height="30">
                 </asp:DropDownList>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="cmbMukhyaGrup" ErrorMessage="मुख्य ग्र्प निवडा"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
