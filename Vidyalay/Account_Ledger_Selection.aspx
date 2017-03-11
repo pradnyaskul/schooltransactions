@@ -20,8 +20,8 @@
             <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
             <AlternatingRowStyle BackColor="#BFE4FF" />
             <Columns>
-                <asp:BoundField DataField="  " HeaderText="अनुक्रमांक" ItemStyle-Width="150" />
-                <asp:BoundField DataField=" " HeaderText="खात्याचे नाव" ItemStyle-Width="150" />
+                <asp:BoundField HeaderText="अनुक्रमांक" ItemStyle-Width="150"  />
+                <asp:BoundField HeaderText="खात्याचे नाव" ItemStyle-Width="150" />
                                  
                 <asp:TemplateField>
                     <HeaderTemplate>
@@ -35,7 +35,7 @@
                         <asp:CheckBox ID="chkCtrl" runat="server" />
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:BoundField DataField=" " HeaderText="आरंभी शिल्लक" ItemStyle-Width="150" />
+                <asp:BoundField HeaderText="आरंभी शिल्लक" ItemStyle-Width="150" />
                 
                  <asp:TemplateField>
                     <HeaderTemplate>

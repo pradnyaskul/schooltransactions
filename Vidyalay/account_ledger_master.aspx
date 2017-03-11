@@ -98,7 +98,7 @@
                 <td class="auto-style67">
                     <asp:DropDownList ID="cmbAccountGroup" runat="server" Height="17px" Width="150px">
                     </asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="अकौंट ग्रुप सिलेक्ट करा" ForeColor="Red">*</asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="अकौंट ग्रुप सिलेक्ट करा" ForeColor="Red" ControlToValidate="cmbAccountGroup">*</asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style46">
                     <asp:RadioButtonList ID="rdbListtakke" RepeatDirection="Horizontal" runat="server" Width="228px">
