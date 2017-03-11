@@ -30,6 +30,10 @@
             height: 30px;
             width: 750px;
         }
+        .auto-style41 {
+            height: 22px;
+            width: 750px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -38,25 +42,38 @@
             <td class="auto-style30" style="font-size: x-large; font-weight: bold; color: #FFFFFF; text-decoration: underline; text-align: center; background-color: #A8A8A8;">Account Group Master</td>
         </tr>
         <tr>
-            <td class="auto-style40" style="background-color: #B5E8E8;">अनुक्रमांक&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="txtAnukramank" runat="server" Height="25px" Width="174px"></asp:TextBox>
+            <td class="auto-style40" style="background-color: #B5E8E8;">
+                <asp:Label ID="Label3" runat="server" Text="अनुक्रमांक"></asp:Label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="txtAnukramank" runat="server" Height="25px" Width="174px"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" ForeColor="Red" runat="server" ErrorMessage="अनुक्रमांक टाका" ControlToValidate="txtAnukramank">*</asp:RequiredFieldValidator>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:CheckBox ID="chbPotKhate" runat="server" Text="जमा/खर्च पत्रकात पोटखाती दाखवायची का?" />
             </td>
         </tr>
         <tr>
-            <td class="auto-style30" style="background-color: #B5E8E8;">ग्रुपचे नाव&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <td class="auto-style30" style="background-color: #B5E8E8;">
+                <asp:Label ID="Label4" runat="server" Text="ग्रुपचे नाव"></asp:Label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="txtGrupcheNaav" runat="server" Width="180px" Height="25px"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator2" ForeColor="Red" runat="server" ErrorMessage="ग्रुपचे नाव टाका" ControlToValidate="txtGrupcheNaav">*</asp:RequiredFieldValidator>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ग्रुप नं&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                <asp:Label ID="Label6" runat="server" Text="ग्रुप नं"></asp:Label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="txtgroupno" runat="server" Height="25px" Width="140px"></asp:TextBox>
             &nbsp; <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ForeColor="Red" runat="server" ErrorMessage="ग्रुप नंबर टाका" ControlToValidate="txtgroupno">*</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
-            <td class="auto-style30" style="background-color: #B5E8E8;">मुख्य ग्रुप निवडा&nbsp;
-                <asp:DropDownList ID="cmbMukhyaGrup" runat="server" Width="189px" Height="30">
+            <td class="auto-style41" style="background-color: #B5E8E8;">
+                <asp:Label ID="Label5" runat="server" Text="मुख्य ग्रुप निवडा"></asp:Label>
+                &nbsp;&nbsp;&nbsp;
+                <asp:DropDownList ID="cmbMukhyaGrup" runat="server" Width="189px" Height="25">
                 </asp:DropDownList>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="cmbMukhyaGrup" ErrorMessage="मुख्य ग्रुप निवडा" ForeColor="Red">*</asp:RequiredFieldValidator>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label7" runat="server" Text="छपाई क्रम"></asp:Label>
+&nbsp;&nbsp;
+                <asp:TextBox ID="txtChapaiKram" Height="25" runat="server" OnTextChanged="txtChapaiKram_TextChanged"></asp:TextBox>
             </td>
         </tr>
         <tr>
@@ -82,28 +99,25 @@
                 <table class="auto-style37">
                     <tr>
                         <td class="auto-style39">
-                            <asp:ImageButton ID="btnAdd" runat="server" Height="16px" Width="73px" />
-                            <br />
-                            Add</td>
-                        <td class="auto-style38">
-                            <asp:ImageButton ID="btnSave" runat="server" Height="16px" Width="73px" />
-                            <br />
-                            Save</td>
-                        <td class="auto-style38">
-                            <asp:ImageButton ID="btnModify" runat="server" Height="16px" Width="73px" />
-                            <br />
-                            Modify</td>
-                        <td class="auto-style38">
-                            <asp:ImageButton ID="ImageButton6" runat="server"  Height="16px" Width="73px" />
+                            <asp:Button ID="Button1" runat="server" Text="Add" />
                         </td>
                         <td class="auto-style38">
-                            <asp:ImageButton ID="btnDelete" runat="server" Height="16px" Width="73px" />
-                        &nbsp;<br />
-                            Delete</td>
+                            <asp:Button ID="Button2" runat="server" Text="Save" />
+                        </td>
                         <td class="auto-style38">
-                            <asp:ImageButton ID="btnExit" runat="server" Height="16px" Width="73px" />
+                            <asp:Button ID="Button3" runat="server" Text="Modify" />
                             <br />
-                            Exit</td>
+                            </td>
+                        <td class="auto-style38">
+                            <asp:Button ID="Button4" runat="server" Text="Reset" />
+                        </td>
+                        <td class="auto-style38">
+                            <asp:Button ID="Button5" runat="server" Text="Delete" />
+                        &nbsp;<br />
+                            </td>
+                        <td class="auto-style38">
+                            <asp:Button ID="Button6" runat="server" Text="Exit" />
+                        </td>
                     </tr>
                 </table>
             </td>

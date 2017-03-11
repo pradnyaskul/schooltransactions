@@ -26,7 +26,7 @@ public class account_head_cls : clsconnection
             set {ah_name = value; }
         }
        
-        DateTime dt = DateTime.Now; // will give the date for today
+        DateTime dt = DateTime.Now; // Gives the date for today
        //string sdate = DateTime.Now.ToShortDateString();
         string sdate = DateTime.Now.ToString("yyyy-MM-dd");
         public int saverecord()

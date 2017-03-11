@@ -11,4 +11,8 @@ public partial class Default2 : System.Web.UI.Page
     {
 
     }
+    protected void txtChapaiKram_TextChanged(object sender, EventArgs e)
+    {
+
+    }
 }

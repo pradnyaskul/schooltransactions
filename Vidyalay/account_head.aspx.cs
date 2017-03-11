@@ -12,7 +12,7 @@ public partial class Default2 : System.Web.UI.Page
     DataSet ds;
     MySqlDataAdapter da;
     clsconnection cn = new clsconnection();
-     account_head_cls accheadobj = new  account_head_cls();
+    account_head_cls accheadobj = new  account_head_cls();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -40,7 +40,7 @@ public partial class Default2 : System.Web.UI.Page
 
     }
    
-    private void ClearTextBoxes(ControlCollection controlCollection)
+    private void ClearTextBoxes(ControlCollection controlCollection) //To clear the values of TextBoxes
     {
         foreach (Control ctrl in controlCollection)
         {

@@ -5,22 +5,13 @@
         .auto-style33 {
             width: 100%;
         }
-        .auto-style38 {
-            width: 109px;
-        }
         .auto-style40 {
             width: 202px;
-        }
-        .auto-style41 {
-            width: 142px;
-        }
-        .auto-style42 {
-            width: 153px;
         }
         .auto-style46 {
         }
     .auto-style47 {
-        width: 142px;
+        width: 116px;
         height: 31px;
     }
     .auto-style48 {
@@ -28,11 +19,11 @@
         height: 31px;
     }
     .auto-style49 {
-        width: 74px;
+        width: 110px;
         height: 31px;
     }
     .auto-style50 {
-        width: 192px;
+        width: 175px;
         height: 31px;
     }
     .auto-style51 {
@@ -52,16 +43,19 @@
     .auto-style64 {
         text-align: center;
     }
-    .auto-style65 {
-        text-align: center;
-        width: 157px;
-    }
-    .auto-style66 {
-        width: 74px;
-    }
-    .auto-style67 {
-        width: 192px;
-    }
+        .auto-style68 {
+            width: 116px;
+        }
+        .auto-style70 {
+            width: 110px;
+        }
+        .auto-style71 {
+            width: 175px;
+        }
+        .auto-style72 {
+            width: 118px;
+            text-align: center;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -77,26 +71,32 @@
         <br />
         <table class="auto-style33">
             <tr>
-                <td class="auto-style41">अनुक्रमांक</td>
+                <td class="auto-style68">
+                    <asp:Label ID="Label3" runat="server" Text="अनुक्रमांक"></asp:Label>
+                </td>
                 <td class="auto-style40">
-                    <asp:TextBox ID="txtAnukramank" runat="server" Height="17px" Width="167px"></asp:TextBox>
+                    <asp:TextBox ID="txtAnukramank" runat="server" Height="25px" Width="167px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtAnukramank" ErrorMessage="अनुक्रमांक टाका" ForeColor="Red">*</asp:RequiredFieldValidator>
                 </td>
-                <td class="auto-style66">&nbsp;</td>
-                <td class="auto-style67">&nbsp;</td>
+                <td class="auto-style70">&nbsp;</td>
+                <td class="auto-style71">&nbsp;</td>
                 <td class="auto-style46">
                     <asp:CheckBox ID="chbVerticalDayBook" runat="server" Text="Vertical Day-Book" />
                 </td>
             </tr>
             <tr>
-                <td class="auto-style41">खात्याचा प्रकार</td>
+                <td class="auto-style68">
+                    <asp:Label ID="Label4" runat="server" Text="खात्याचा प्रकार"></asp:Label>
+                </td>
                 <td class="auto-style40">
-                    <asp:TextBox ID="txtKhatyachaPrakar" runat="server" Width="166px"></asp:TextBox>
+                    <asp:TextBox ID="txtKhatyachaPrakar" runat="server" Width="166px" Height="25px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="cmbKhatyachaPrakar" ErrorMessage="खात्याचा प्रकार लिहा" ForeColor="#FF3300">*</asp:RequiredFieldValidator>
                 </td>
-                <td class="auto-style66">अकौंट ग्रुप</td>
-                <td class="auto-style67">
-                    <asp:DropDownList ID="cmbAccountGroup" runat="server" Height="17px" Width="150px">
+                <td class="auto-style70">
+                    <asp:Label ID="Label6" runat="server" Text="अकौंट ग्रुप"></asp:Label>
+                </td>
+                <td class="auto-style71">
+                    <asp:DropDownList ID="cmbAccountGroup" runat="server" Height="25px" Width="150px">
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ErrorMessage="अकौंट ग्रुप सिलेक्ट करा" ForeColor="Red" ControlToValidate="cmbAccountGroup">*</asp:RequiredFieldValidator>
                 </td>
@@ -109,14 +109,18 @@
                 </td>
             </tr>
             <tr>
-                <td class="auto-style47" style="background-color: #B5E8E8">आरंभी शिल्लक</td>
+                <td class="auto-style47" style="background-color: #B5E8E8">
+                    <asp:Label ID="Label5" runat="server" Text="आरंभी शिल्लक"></asp:Label>
+                </td>
                 <td class="auto-style48" style="background-color: #B5E8E8">
-                    <asp:TextBox ID="txtArambhiShillak" runat="server" Width="166px"></asp:TextBox>
+                    <asp:TextBox ID="txtArambhiShillak" runat="server" Width="166px" Height="25px"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtArambhiShillak" ErrorMessage="आरंभी शिल्लक लिहा" ForeColor="Red">*</asp:RequiredFieldValidator>
                 </td>
-                <td class="auto-style49" style="background-color: #B5E8E8">खात्याचा प्रकार</td>
+                <td class="auto-style49" style="background-color: #B5E8E8">
+                    <asp:Label ID="Label7" runat="server" Text="खात्याचा प्रकार"></asp:Label>
+                </td>
                 <td class="auto-style50" style="background-color: #B5E8E8">
-                    <asp:DropDownList ID="cmbKhatyachaPrakar" runat="server" Height="16px" Width="153px">
+                    <asp:DropDownList ID="cmbKhatyachaPrakar" runat="server" Height="25px" Width="153px">
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtKhatyachaPrakar" ErrorMessage="खात्याचा प्रकार निवडा" ForeColor="#FF3300">*</asp:RequiredFieldValidator>
                 </td>
@@ -153,33 +157,26 @@
 <table class="auto-style33">
     <tr>
         <td class="auto-style64">
-            <asp:ImageButton ID="ImageButton2" runat="server" Height="24px" Width="97px" />
-            <br />
-            ADD</td>
-        <td class="auto-style64">
-            <asp:ImageButton ID="ImageButton4" runat="server" Height="24px" Width="97px" />
-            <br />
-            SAVE</td>
-        <td class="auto-style58">
-            <asp:ImageButton ID="ImageButton5" runat="server" Height="24px" Width="97px" />
-            <br />
-            MODIFY</td>
-        <td class="auto-style63">
-            <asp:ImageButton ID="ImageButton6" runat="server" Height="24px" Width="97px" />
-            <br />
-            <br />
+            <asp:Button ID="Button1" runat="server" Text="ADD" />
         </td>
-        <td class="auto-style65">
-            <asp:ImageButton ID="ImageButton8" runat="server" Height="24px" Width="97px" />
-            <br />
-            DELETE</td>
         <td class="auto-style64">
-            <asp:ImageButton ID="ImageButton7" runat="server" Height="24px" Width="97px" />
-            <br />
-            EXIT</td>
+            <asp:Button ID="Button2" runat="server" Text="SAVE" />
+        </td>
+        <td class="auto-style58">
+            <asp:Button ID="Button3" runat="server" Text="MODIFY" />
+        </td>
+        <td class="auto-style63">
+            <asp:Button ID="Button4" runat="server" Text="RESET" />
+        </td>
+        <td class="auto-style72">
+            <asp:Button ID="Button5" runat="server" Text="DELETE" />
+        </td>
+        <td class="auto-style64">
+            <asp:Button ID="Button6" runat="server" Text="EXIT" />
+        </td>
     </tr>
     <tr>
-        <td class="auto-style57" colspan="5">अक्षयामृत इन्फोटेक प्रायव्हेट लिमिटेड, कोल्हापूर </td>
+        <td class="auto-style57" colspan="5">&nbsp;अक्षयामृत इन्फोटेक, कोल्हापूर</td>
     </tr>
 </table>
 </asp:Content>
