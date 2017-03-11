@@ -1,27 +1,21 @@
 ﻿
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script runat="server">
+
+    Protected Sub btmDisplay_Click(sender As Object, e As EventArgs)
+
+    End Sub
+</script>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-    </style>
-</head>
 <body>
     <form id="form1" runat="server">
-        <br />
-        <table class="auto-style1">
-            <tr>
-                <td style="font-size: x-large; font-weight: bold; color: #FFFFFF; text-decoration: underline; text-align: center; background-color: #A8A8A8;">Ledger Selection</td>
-            </tr>
-        </table>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" Height="250px">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false">
             <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
             <AlternatingRowStyle BackColor="#BFE4FF" />
             <Columns>
-                <asp:BoundField HeaderText="अनुक्रमांक" ItemStyle-Width="150" />
-                <asp:BoundField HeaderText="खात्याचे नाव" ItemStyle-Width="150" />
+                <asp:BoundField DataField="  " HeaderText="अनुक्रमांक" ItemStyle-Width="150" />
+                <asp:BoundField DataField=" " HeaderText="खात्याचे नाव" ItemStyle-Width="150" />
                                  
                 <asp:TemplateField>
                     <HeaderTemplate>
@@ -35,7 +29,7 @@
                         <asp:CheckBox ID="chkCtrl" runat="server" />
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:BoundField HeaderText="आरंभी शिल्लक" ItemStyle-Width="150" />
+                <asp:BoundField DataField=" " HeaderText="आरंभी शिल्लक" ItemStyle-Width="150" />
                 
                  <asp:TemplateField>
                     <HeaderTemplate>
@@ -52,8 +46,13 @@
         </asp:GridView>
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnSave" runat="server" Text="Save"  Width="63px" />
-        &nbsp;&nbsp;&nbsp; <asp:Button ID="btnDelete" runat="server" Text="Delete"  Width="61px" />
+
+        <asp:Button ID="btnDisplay" runat="server" Text="Save"  Width="63px" />
+        &nbsp;&nbsp;&nbsp; <asp:Button ID="btnDisplay0" runat="server" Text="Delete"  Width="61px" />
+
+        &nbsp;&nbsp;&nbsp; 
+        &nbsp;&nbsp;&nbsp; 
+
         <br />
         <br />
 

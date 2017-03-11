@@ -59,7 +59,7 @@
                         <NodeStyle HorizontalPadding="5px" VerticalPadding="12px" />
                         <SelectedNodeStyle BackColor="#6699FF" BorderStyle="None" />
                     </asp:TreeView>
-                    <asp:Label ID="Label1" runat="server" BackColor="#000099" BorderColor="Blue" BorderStyle="Groove" Font-Bold="True" Font-Size="14pt" ForeColor="#99FFCC" style="z-index: 1; left: 14px; top: 97px; position: absolute; width: 188px; height: 44px; text-align: center" Text="Select Account Name"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" BackColor="#3E3E3E" BorderStyle="Groove" Font-Bold="True" Font-Size="14pt" ForeColor="#99FFCC" style="z-index: 1; left: 14px; top: 97px; position: absolute; width: 162px; height: 44px; text-align: center" Text="Select Account Name"></asp:Label>
                 </td>
                 <td class="auto-style28" style="background-color: #C0C0C0; text-align: right;" colspan="5">
                          
