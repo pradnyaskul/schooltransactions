@@ -34,50 +34,70 @@
             height: 22px;
             width: 750px;
         }
+        .auto-style42 {
+            height: 30px;
+            width: 537px;
+        }
+        .auto-style43 {
+            height: 23px;
+            width: 537px;
+        }
+        .auto-style44 {
+            height: 22px;
+            width: 537px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
     <table class="auto-style29">
         <tr>
-            <td class="auto-style30" style="font-size: x-large; font-weight: bold; color: #FFFFFF; text-decoration: underline; text-align: center; background-color: #A8A8A8;">Account Group Master</td>
+            <td class="auto-style30" style="font-size: x-large; font-weight: bold; color: #FFFFFF; text-decoration: underline; text-align: center; background-color: #A8A8A8;" colspan="2">Account Group Master</td>
         </tr>
         <tr>
-            <td class="auto-style40" style="background-color: #B5E8E8;">
+            <td class="auto-style42" style="background-color: #B5E8E8;">
                 <asp:Label ID="Label3" runat="server" Text="अनुक्रमांक"></asp:Label>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:TextBox ID="txtAnukramank" runat="server" Height="25px" Width="174px" Font-Names="SakalBharati Hindi"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" ForeColor="Red" runat="server" ErrorMessage="अनुक्रमांक टाका" ControlToValidate="txtAnukramank">*</asp:RequiredFieldValidator>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+            </td>
+            <td class="auto-style40" style="background-color: #B5E8E8;">
                 <asp:CheckBox ID="chbPotKhate" runat="server" Text="जमा/खर्च पत्रकात पोटखाती दाखवायची का?" />
             </td>
         </tr>
         <tr>
-            <td class="auto-style30" style="background-color: #B5E8E8;">
+            <td class="auto-style43" style="background-color: #B5E8E8;">
                 <asp:Label ID="Label4" runat="server" Text="ग्रुपचे नाव " Font-Strikeout="False"></asp:Label>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="txtGrupcheNaav" runat="server" Width="180px" Height="25px"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator2" ForeColor="Red" runat="server" ErrorMessage="ग्रुपचे नाव टाका" ControlToValidate="txtGrupcheNaav">*</asp:RequiredFieldValidator>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp; 
+            </td>
+            <td class="auto-style30" style="background-color: #B5E8E8;">
                 <asp:Label ID="Label6" runat="server" Text="ग्रुप नं"></asp:Label>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="txtgroupno" runat="server" Height="25px" Width="140px"></asp:TextBox>
-            &nbsp; <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ForeColor="Red" runat="server" ErrorMessage="ग्रुप नंबर टाका" ControlToValidate="txtgroupno">*</asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ForeColor="Red" runat="server" ErrorMessage="ग्रुप नंबर टाका" ControlToValidate="txtgroupno">*</asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
-            <td class="auto-style41" style="background-color: #B5E8E8;">
+            <td class="auto-style44" style="background-color: #B5E8E8;">
                 <asp:Label ID="Label5" runat="server" Text="मुख्य ग्रुप निवडा"></asp:Label>
                 &nbsp;&nbsp;&nbsp;
                 <asp:DropDownList ID="cmbMukhyaGrup" runat="server" Width="189px" Height="25">
                 </asp:DropDownList>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="cmbMukhyaGrup" ErrorMessage="मुख्य ग्रुप निवडा" ForeColor="Red">*</asp:RequiredFieldValidator>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;
+            </td>
+            <td class="auto-style41" style="background-color: #B5E8E8;">
                 <asp:Label ID="Label7" runat="server" Text="छपाई क्रम"></asp:Label>
-&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="txtChapaiKram" Height="25" runat="server" OnTextChanged="txtChapaiKram_TextChanged"></asp:TextBox>
             </td>
         </tr>
         <tr>
-            <td class="auto-style32">
+            <td class="auto-style32" colspan="2">
                  <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" Height="250px" style="margin-top: 0px" Width="788px">
             <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
             <AlternatingRowStyle BackColor="#BFE4FF" />
@@ -95,7 +115,7 @@
 
         </tr>
         <tr>
-            <td class="auto-style32">
+            <td class="auto-style32" colspan="2">
                 <table class="auto-style37">
                     <tr>
                         <td class="auto-style39">
