@@ -72,11 +72,11 @@
         <table class="auto-style33">
             <tr>
                 <td class="auto-style68">
-                    <asp:Label ID="Label3" runat="server" Text="अनुक्रमांक"></asp:Label>
+                    <asp:Label runat="server" Text="अनुक्रमांक"></asp:Label>
                 </td>
                 <td class="auto-style40">
-                    <asp:TextBox ID="txtAnukramank" runat="server" Height="25px" Width="167px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtAnukramank" ErrorMessage="अनुक्रमांक टाका" ForeColor="Red">*</asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txtSerialNo" runat="server" Height="25px" Width="167px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtSerialNo" ErrorMessage="अनुक्रमांक टाका" ForeColor="Red">*</asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style70">&nbsp;</td>
                 <td class="auto-style71">&nbsp;</td>
@@ -89,8 +89,8 @@
                     <asp:Label ID="Label4" runat="server" Text="खात्याचा प्रकार"></asp:Label>
                 </td>
                 <td class="auto-style40">
-                    <asp:TextBox ID="txtKhatyachaPrakar" runat="server" Width="166px" Height="25px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="cmbKhatyachaPrakar" ErrorMessage="खात्याचा प्रकार लिहा" ForeColor="#FF3300">*</asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txtAccountType" runat="server" Width="166px" Height="25px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtAccountType" ErrorMessage="खात्याचा प्रकार लिहा" ForeColor="#FF3300">*</asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style70">
                     <asp:Label ID="Label6" runat="server" Text="अकौंट ग्रुप"></asp:Label>
@@ -113,19 +113,19 @@
                     <asp:Label ID="Label5" runat="server" Text="आरंभी शिल्लक"></asp:Label>
                 </td>
                 <td class="auto-style48" style="background-color: #B5E8E8">
-                    <asp:TextBox ID="txtArambhiShillak" runat="server" Width="166px" Height="25px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtArambhiShillak" ErrorMessage="आरंभी शिल्लक लिहा" ForeColor="Red">*</asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txtOpeningBalance" runat="server" Width="166px" Height="25px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtOpeningBalance" ErrorMessage="आरंभी शिल्लक लिहा" ForeColor="Red">*</asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style49" style="background-color: #B5E8E8">
                     <asp:Label ID="Label7" runat="server" Text="खात्याचा प्रकार"></asp:Label>
                 </td>
                 <td class="auto-style50" style="background-color: #B5E8E8">
-                    <asp:DropDownList ID="cmbKhatyachaPrakar" runat="server" Height="25px" Width="153px">
+                    <asp:DropDownList ID="cmbAccountType" runat="server" Height="25px" Width="153px">
                     </asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtKhatyachaPrakar" ErrorMessage="खात्याचा प्रकार निवडा" ForeColor="#FF3300">*</asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="cmbAccountType" ErrorMessage="खात्याचा प्रकार निवडा" ForeColor="#FF3300">*</asp:RequiredFieldValidator>
                 </td>
                 <td class="auto-style51" style="background-color: #B5E8E8">
-                    <asp:RadioButtonList ID="rdbListjamanave" runat="server" RepeatDirection="Horizontal" Width="165px">
+                    <asp:RadioButtonList ID="rdbListCreditDebit" runat="server" RepeatDirection="Horizontal" Width="165px">
                         <asp:ListItem>जमा</asp:ListItem>
                         <asp:ListItem>नावे</asp:ListItem>
                     </asp:RadioButtonList>
