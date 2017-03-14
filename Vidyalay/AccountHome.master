@@ -168,9 +168,9 @@
                         <div id="masters" onclick="MastersFunction()" class="bg-aqua dropbtn" style="height: 70px;margin-top: -30px;border-radius:8px;">         
                           <h3 id="label" style="padding-top: 20px;color:white;">Masters </h3>      
                             <div id="myDropdown" class="dropdown-content bg-aqua" style="display: block;width: 97%;border-radius: 10px;margin-top: 15px;">
-                              <a href="#">Group Master</a>
-                              <a href="#">Ledger Master</a>
-                              <a href="#">Ledger Selection</a>
+                              <a href="Account_Group_Maser.aspx">Group Master</a>
+                              <a href="account_ledger_master.aspx">Ledger Master</a>
+                              <a href="Account_Ledger_Selection.aspx">Ledger Selection</a>
                             </div>
                         </div>  
                     </div>
@@ -212,7 +212,7 @@
                 </div><br/>                        
                      
 
-        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        <asp:ContentPlaceHolder id="AccountContentPlaceHolder" runat="server">
         
         </asp:ContentPlaceHolder>
 
