@@ -1,0 +1,225 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AccountHome.master.cs" Inherits="AccountHome" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <script src="js/jquery-ui-1.10.3.min.js"></script>
+  
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <script src="js/bootstrap.min.js"></script>
+   
+
+    <style>
+        .bg-aqua {
+            background-color: #00c0ef !important;
+        }
+       .bg-cyan {
+            background-color: #00CDCD !important;
+        }
+        .ch-img-1 { 
+	            background:#3D3630;
+            }
+
+            .ch-img-2 { 
+	            background:#43CD4B;
+            }
+
+            .ch-img-3 { 
+	            background:#a2b040;
+            }
+            /*-- w3layouts --*/
+            .ch-img-4 { 
+	            background:#f2af00;
+            }
+                       
+
+                    .container a {
+                        float: left;
+                        font-size: 16px;
+                        color: white;
+                        text-align: center;
+                        padding: 14px 16px;
+                        text-decoration: none;
+                    }
+
+                    .dropdown {
+                        float: left;
+                        overflow: hidden;
+                    }
+
+                    .dropdown .dropbtn {
+                        font-size: 16px;    
+                        border: none;
+                        outline: none;
+                        color: white;
+                        padding: 14px 16px;
+                        background-color: inherit;
+                    }
+
+                    .container a:hover, .dropdown:hover .dropbtn {
+                        background-color: red;
+                    }
+
+                    .dropdown-content {
+                        display: none;
+                        position: absolute;
+                        /*background-color: #f9f9f9;*/
+                        min-width: 160px;
+                        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                        z-index: 1;
+                    }
+
+                    .dropdown-content a {
+                        float: none;
+                        color: black;
+                        padding: 12px 16px;
+                        text-decoration: none;
+                        display: block;
+                        text-align: left;
+                    }
+
+                    .dropdown-content a:hover {
+                        background-color: #ddd;
+                    }
+
+                    .dropdown:hover .dropdown-content {
+                        display: block;
+                    }
+        </style>
+
+
+    <script>
+        
+        $(document).ready(function () {
+            debugger;
+                $(".dropdown-content").hide();           
+            //  $("#Transaction").hide();
+
+                
+                $("#myDropdown").mouseleave(function () {
+                    debugger;
+                    MastersFunction();
+                });
+
+        });
+        
+
+        function MastersFunction() {
+            debugger;
+            document.getElementById("myDropdown").classList.toggle("show");           
+        }
+        function TransactionsFunction() {
+            debugger;
+            document.getElementById("Transaction").classList.toggle("show");            
+        }
+
+        function UtilityFunction() {
+            debugger;
+            document.getElementById("Utility").classList.toggle("show");            
+        }
+        function ReportsFunction() {
+            debugger;
+            document.getElementById("Reports").classList.toggle("show");            
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+        
+
+</script>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-inverse" style="height: 50px; min-height:20px !important;">
+              <div class="container-fluid">
+                <div class="collapse navbar-collapse" id="myNavbar">
+                  <ul class="nav navbar-nav">
+                    <li class=""><a href="#">
+                        <h3 style="margin-top: 0px;color:whitesmoke;">Account </h3></a></li>              
+                  </ul>
+                </div>
+              </div>
+            </nav>     
+
+        <div class="container text-center">    
+
+                  <div class="row">
+
+                    <div class="col-md-3 " style="height: 70px;padding:5px;">
+                        <div id="masters" onclick="MastersFunction()" class="bg-aqua dropbtn" style="height: 70px;margin-top: -30px;border-radius:8px;">         
+                          <h3 id="label" style="padding-top: 20px;color:white;">Masters </h3>      
+                            <div id="myDropdown" class="dropdown-content bg-aqua" style="display: block;width: 97%;border-radius: 10px;margin-top: 15px;">
+                              <a href="#">Group Master</a>
+                              <a href="#">Ledger Master</a>
+                              <a href="#">Ledger Selection</a>
+                            </div>
+                        </div>  
+                    </div>
+                       
+                    <div class="col-md-3" style="height: 70px;padding:5px;">
+                      <div class="bg-cyan dropbtn" onclick="TransactionsFunction()" style="height: 70px;margin-top: -30px;border-radius:8px;">         
+                         <h3 style="padding-top: 20px;color:white; border-radius:3px;">Transactions </h3>
+                            <div id="Transaction" class="dropdown-content bg-cyan" style="display: block;width: 97%;border-radius: 10px;margin-top: 15px;">
+                              <a href="#">Receipt Voucher</a>
+                              <a href="#">Payment Voucher</a>
+                              <a href="#">Contra Voucher</a>
+                            </div>
+                      </div>   
+                    </div>
+
+                      <div class="col-md-3 " style="height: 70px;padding:5px;">
+                        <div class="ch-img-2 dropbtn" onclick="ReportsFunction()" style="height: 70px;margin-top: -30px;border-radius:8px;">         
+                           <h3 style="padding-top: 20px;color:white;">Reports </h3>     
+                            <div id="Reports" class="dropdown-content ch-img-2" style="display: block;width: 97%;border-radius: 10px;margin-top: 15px;">
+                              <a href="#">Receipt Voucher</a>
+                              <a href="#">Payment Voucher</a>
+                              <a href="#">Contra Voucher</a>
+                            </div> 
+                      </div>   
+                    </div>
+
+                    <div class="col-md-3" style="height: 70px;padding:5px;">
+                      <div class="bg-aqua dropbtn" onclick="UtilityFunction()" style="height: 70px;margin-top: -30px;border-radius:8px;">         
+                         <h3 style="padding-top: 20px;color:white;">Utility </h3>
+                           <div id="Utility" class="dropdown-content bg-aqua" style="display: block;width: 97%;border-radius: 10px;margin-top: 15px;">
+                              <a href="#">Receipt Voucher</a>
+                              <a href="#">Payment Voucher</a>
+                              <a href="#">Contra Voucher</a>
+                            </div>
+                      </div>   
+                    </div>
+
+                  </div>
+                </div><br/>                        
+                     
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+        <footer class="container-fluid text-center">
+              <p>अक्षयामृत इन्फोटेक, कोल्हापूर</p>
+            </footer>
+
+    </form>
+</body>
+</html>
