@@ -1,5 +1,4 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AccountHome.master.cs" Inherits="AccountHome" %>
-
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -13,9 +12,26 @@
     <script src="js/jquery-ui-1.10.3.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-1.6.4.min.js"></script>
+    <script src="js/jquery.ui.core.js"></script>
+    <script src="js/jquery.ui.position.js"></script>
+    <script src="js/jquery.ui.widget.js"></script>
+    <script src="js/jquery.ui.button.js"></script>
+    <script src="js/jquery.ui.autocomplete.js"></script>
    
-
+   
     <style>
+
+        .ddlClass {
+         border-radius:5px;
+         width:180px;
+         height:25px;
+        }
+
+        hr{
+               border: 1px solid DARKRED;
+               margin-top:0px;
+            }
         .bg-aqua {
             background-color: #00c0ef !important;
         }
@@ -92,21 +108,36 @@
                         display: block;
                     }
         </style>
-
-
+    
     <script>
         
         $(document).ready(function () {
-            debugger;
-                $(".dropdown-content").hide();           
-            //  $("#Transaction").hide();
+           
+            $(".dropdown-content").hide();
 
+            $("#mastersBox").mouseenter(function () {
+               
+                $("#myDropdown").slideDown();
+            });
+            $("#transactionsBox").mouseenter(function () {
                 
-                $("#myDropdown").mouseleave(function () {
-                    debugger;
-                    MastersFunction();
-                });
+                $("#Transaction").slideDown();
+            });
+            $("#reportsBox").mouseenter(function () {
+               
+                $("#Reports").slideDown();
+            });
+            $("#utilityBox").mouseenter(function () {
 
+                $("#Utility").slideDown();
+            });
+
+            $(".dropdown-content").mouseleave(function () {
+                debugger;
+                
+                $(".dropdown-content").slideUp();
+            });
+                        
         });
         
 
@@ -149,23 +180,20 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <nav class="navbar navbar-inverse" style="height: 50px; min-height:20px !important;">
-              <div class="container-fluid">
-                <div class="collapse navbar-collapse" id="myNavbar">
-                  <ul class="nav navbar-nav">
-                    <li class=""><a href="#">
-                        <h3 style="margin-top: 0px;color:whitesmoke;">Account </h3></a></li>              
-                  </ul>
-                </div>
-              </div>
+        <nav class="navbar navbar-inverse" style="height: 50px;margin-top: 2px; min-height:20px !important;">
+            <div class="container-fluid" style="margin-top: 3px;">                       
+                    <span style="margin-top: 13px;margin-left:10px; color:whitesmoke;"><a href="AccountDashboard.aspx" style="color:whitesmoke;font-size: 30px;font-family: cursive;">Account</a>Control Pannel</span>
+                     <asp:Label ID="lblAccountHead" style="margin-top: 13px; color:whitesmoke;font-size: 20px;font-family: cursive;margin-left:20%;" runat="server" Text="Label"></asp:Label>
+                        <span style="margin-top: 13px; color:whitesmoke;font-size: 20px;font-family: cursive;margin-left:30%;">प्रमुख खाते निवडा :</span>
+                        <asp:DropDownList ID="ddlAccountHead" CssClass="ddlClass" runat="server" OnSelectedIndexChanged="ddlAccountHead_SelectedIndexChanged" AutoPostBack="True" OnTextChanged="ddlAccountHead_TextChanged" ></asp:DropDownList>
+            </div>
             </nav>     
 
         <div class="container text-center">    
 
                   <div class="row">
-
                     <div class="col-md-3 " style="height: 70px;padding:5px;">
-                        <div id="masters" onclick="MastersFunction()" class="bg-aqua dropbtn" style="height: 70px;margin-top: -30px;border-radius:8px;">         
+                        <div id="mastersBox" onclick="MastersFunction()" class="bg-aqua dropbtn" style="height: 70px;margin-top: -30px;border-radius:8px;">         
                           <h3 id="label" style="padding-top: 20px;color:white;">Masters </h3>      
                             <div id="myDropdown" class="dropdown-content bg-aqua" style="display: block;width: 97%;border-radius: 10px;margin-top: 15px;">
                               <a href="Account_Group_Maser.aspx">Group Master</a>
@@ -176,7 +204,7 @@
                     </div>
                        
                     <div class="col-md-3" style="height: 70px;padding:5px;">
-                      <div class="bg-cyan dropbtn" onclick="TransactionsFunction()" style="height: 70px;margin-top: -30px;border-radius:8px;">         
+                      <div id="transactionsBox" class="bg-cyan dropbtn" onclick="TransactionsFunction()" style="height: 70px;margin-top: -30px;border-radius:8px;">         
                          <h3 style="padding-top: 20px;color:white; border-radius:3px;">Transactions </h3>
                             <div id="Transaction" class="dropdown-content bg-cyan" style="display: block;width: 97%;border-radius: 10px;margin-top: 15px;">
                               <a href="#">Receipt Voucher</a>
@@ -187,7 +215,7 @@
                     </div>
 
                       <div class="col-md-3 " style="height: 70px;padding:5px;">
-                        <div class="ch-img-2 dropbtn" onclick="ReportsFunction()" style="height: 70px;margin-top: -30px;border-radius:8px;">         
+                        <div id="reportsBox" class="ch-img-2 dropbtn" onclick="ReportsFunction()" style="height: 70px;margin-top: -30px;border-radius:8px;">         
                            <h3 style="padding-top: 20px;color:white;">Reports </h3>     
                             <div id="Reports" class="dropdown-content ch-img-2" style="display: block;width: 97%;border-radius: 10px;margin-top: 15px;">
                               <a href="#">Receipt Voucher</a>
@@ -198,7 +226,7 @@
                     </div>
 
                     <div class="col-md-3" style="height: 70px;padding:5px;">
-                      <div class="bg-aqua dropbtn" onclick="UtilityFunction()" style="height: 70px;margin-top: -30px;border-radius:8px;">         
+                      <div id="utilityBox" class="bg-aqua dropbtn" onclick="UtilityFunction()" style="height: 70px;margin-top: -30px;border-radius:8px;">         
                          <h3 style="padding-top: 20px;color:white;">Utility </h3>
                            <div id="Utility" class="dropdown-content bg-aqua" style="display: block;width: 97%;border-radius: 10px;margin-top: 15px;">
                               <a href="#">Receipt Voucher</a>
@@ -210,16 +238,19 @@
 
                   </div>
                 </div><br/>                        
-                     
+                     <hr width="90%" align="center"/>
 
         <asp:ContentPlaceHolder id="AccountContentPlaceHolder" runat="server">
         
         </asp:ContentPlaceHolder>
-
-        <footer class="container-fluid text-center">
-              <p>अक्षयामृत इन्फोटेक, कोल्हापूर</p>
-            </footer>
-
+        <br /><br/>
+        <footer class="container-fluid text-right">
+            <div  class="container-fluid" style=" background-color: #333; height: 30px;">
+                <p id="Footer" style="color:white;font-size: 16px;padding-top: 5px;padding-right: 10px;">अक्षयामृत इन्फोटेक, कोल्हापूर</p>
+            </div>
+            
+              
+        </footer>
     </form>
 </body>
 </html>
