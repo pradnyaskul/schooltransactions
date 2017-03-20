@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Default2 : System.Web.UI.Page
+public partial class account_head : System.Web.UI.Page
 {
     DataSet ds;
     MySqlDataAdapter da;
@@ -17,9 +17,12 @@ public partial class Default2 : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
+           
             LoadGrid();
         }
     }
+
+    
 
     private void LoadGrid()
     {
@@ -50,6 +53,7 @@ public partial class Default2 : System.Web.UI.Page
             else
                 ClearTextBoxes(ctrl.Controls);
         }
+        txtid.Text = accheadobj.AutoIncr().ToString();
     }
 
    
@@ -64,39 +68,47 @@ public partial class Default2 : System.Web.UI.Page
     protected void Button6_Click(object sender, EventArgs e)
     {
         ClearTextBoxes(this.Controls);
-        txtid.Text = accheadobj.AutoIncr().ToString();
+        
 
     }
     protected void btnSave_Click1(object sender, EventArgs e)
     {
-        accheadobj.Acc_head_id = Convert.ToInt32(txtid.Text);
+        accheadobj.Acc_head_id = txtid.Text ;
         accheadobj.Acc_head_name = txtrname.Text;
-        clsconnection.school_id = 1;
-        clsconnection.school_dept_id = 1;
-        clsconnection.font_id = 1;
+        clsconnection.school_id ="1";
+        clsconnection.school_dept_id = "1";
+        clsconnection.font_id = "1";
         clsconnection.modify_login_id = "";
         clsconnection.create_login_id = "";
-         
+        Int32 value = 0;
+        if (Int32.TryParse(String.Join(String.Empty, txtid.Text.Select(Char.GetNumericValue)), out value))
+        {
+            Console.WriteLine(value);
+            //....
+        }
         accheadobj.saverecord();
         LoadGrid();
+        ClearTextBoxes(this.Controls);
     }
     protected void btnupdate_Click1(object sender, EventArgs e)
     {
-        accheadobj.Acc_head_id = Convert.ToInt32(txtid.Text);
+        accheadobj.Acc_head_id = txtid.Text;
         accheadobj.Acc_head_name = txtrname.Text;
-        clsconnection.school_id = 1;
-        clsconnection.school_dept_id = 1;
-        clsconnection.font_id = 1;
+        clsconnection.school_id = "1";
+        clsconnection.school_dept_id = "1";
+        clsconnection.font_id = "1";
         clsconnection.modify_login_id = "";
         clsconnection.create_login_id = "";
         accheadobj.updaterecord();
         LoadGrid();
+        ClearTextBoxes(this.Controls);
     }
     protected void btnDelete_Click1(object sender, EventArgs e)
     {
-          accheadobj.Acc_head_id = Convert.ToInt32(txtid.Text);
+          accheadobj.Acc_head_id = txtid.Text;
         accheadobj.deleterecord();
         LoadGrid();
+        ClearTextBoxes(this.Controls);
     }
     protected void GridView1_SelectedIndexChanged1(object sender, EventArgs e)
     {

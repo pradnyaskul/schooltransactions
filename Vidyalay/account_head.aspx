@@ -1,5 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/VidyalayaMainmenu.master" AutoEventWireup="true" CodeFile="account_head.aspx.cs" Inherits="Default2" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AccountHome.master" AutoEventWireup="true" CodeFile="account_head.aspx.cs" Inherits="account_head" %>
 
+ 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
         .auto-style32 {
@@ -10,11 +11,11 @@
             height: 51px;
         }
         .auto-style35 {
-            height: 13px;
+            height: 12px;
         }
         .auto-style36 {
             text-align: right;
-            height: 13px;
+            height: 12px;
         }
     .auto-style37 {
         text-align: left;
@@ -26,11 +27,11 @@
         .auto-style39 {
             text-align: right;
             height: 51px;
-            width: 121px;
+            width: 255px;
         }
     </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<asp:Content ID="Content2" ContentPlaceHolderID="AccountContentPlaceHolder" Runat="Server">
     <table class="auto-style28" style="border: medium outset #800000; padding: 3px; margin-left: 184px; width: 443px; background-color: #EDEEFE;">
         <tr>
             <td class="auto-style37" colspan="5" style="background-color: #C0C0C0">
@@ -43,18 +44,19 @@
         </tr>
         <tr>
             <td class="auto-style38" colspan="2" rowspan="1" style="background-color: #FFFFFF">
-                <asp:Label ID="Label2" runat="server" style="text-align: right" Text="Account Head No."></asp:Label>
+                <asp:Label ID="Label2" runat="server" style="text-align: right" Text="खाते प्रकार अनुक्रम"></asp:Label>
             </td>
             <td colspan="3" rowspan="1" style="background-color: #FFFFFF">
-                <asp:TextBox ID="txtid" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtid" runat="server" ReadOnly="True"></asp:TextBox>
             </td>
         </tr>
         <tr>
             <td class="auto-style38" colspan="2" rowspan="1" style="background-color: #FFFFFF">
-                <asp:Label ID="Label3" runat="server" style="text-align: right" Text="Account Head Name"></asp:Label>
+                <asp:Label ID="Label3" runat="server" style="text-align: right" Text="खाते प्रकारचे नाव"></asp:Label>
             </td>
             <td colspan="3" rowspan="1" style="background-color: #FFFFFF">
-                <asp:TextBox ID="txtrname" runat="server" Height="24px" style="margin-top: 0px" Width="210px"></asp:TextBox>
+                <asp:TextBox ID="txtrname" runat="server" Height="24px" style="margin-top: 0px" Width="180px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtrname" ErrorMessage="खाते प्रकारचे नाव टाका" Font-Size="Smaller" SetFocusOnError="True"></asp:RequiredFieldValidator>
             </td>
         </tr>
         <tr>
