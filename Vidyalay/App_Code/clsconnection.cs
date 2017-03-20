@@ -14,7 +14,7 @@ public class clsconnection
         MySqlCommand cmd;
         MySqlDataAdapter da;
         DataSet ds;
-        public static int fontid, schoolid,schdeptid,mainaccgrid,acc_head_id;
+        public static string fontid, schoolid,schdeptid,mainaccgrid,acc_head_id;
         public static string crloginid, mdloginid;
         public clsconnection()
         {
@@ -22,32 +22,33 @@ public class clsconnection
             string database = "studentmanagement";
             string uid = "root";
             string Passward = "motiv@ted";
-            string connstr = "SERVER =" + server + "; DATABASE =" + database + "; UID =" + uid + "; PASSWORD = " + Passward;
+
+            string connstr = "SERVER =" + server + "; DATABASE =" + database + "; UID =" + uid + "; PASSWORD = " + Passward  +";charset=utf8";
             con = new MySqlConnection(connstr);
 
         }
 
-        public static int font_id
+        public static string font_id
         {
             get { return fontid; }
             set { fontid = value; }
         }
-        public static int school_id
+        public static string school_id
         {
             get { return schoolid; }
             set { schoolid = value; }
         }
-        public static int main_account_groupid
+        public static string main_account_groupid
         {
             get { return mainaccgrid; }
             set { mainaccgrid = value; }
         }
-        public static int  account_head_id
+        public static string account_head_id
         {
-            get { return mainaccgrid; }
-            set { mainaccgrid = value; }
+            get { return acc_head_id; }
+            set { acc_head_id = value; }
         }
-        public static int school_dept_id
+        public static string school_dept_id
         {
             get { return schdeptid; }
             set { schdeptid = value; }
@@ -93,35 +94,84 @@ public class clsconnection
             {
                 open();
                 cmd = new MySqlCommand(qry, con);
-                cmd.ExecuteNonQuery();
+                int cnt = cmd.ExecuteNonQuery();
+
                 close();
             }
             catch (Exception ex)
             {
                 close();
+                
             }
         }
-        public int GetNextId(string tblnm, string column)
+        public string GetNextId(string tblnm, string column)
         {
+           // try
+           // {
+             //   string sql = "Select max(" + column + ") from " + tblnm;
+             //   da = new MySqlDataAdapter(sql, con);
+            //    ds = new DataSet();
+             //   da.Fill(ds, tblnm);
+             //   if (ds.Tables[tblnm].Rows[0][0].ToString() == "")
+             //       return 1;
+             //   else
+              //  {
+              //      int maxno = Convert.ToInt32(ds.Tables[tblnm].Rows[0][0].ToString());
+              //      int id = maxno + 1;
+               //     return id;
+              //  }
+          //  }
+         //   catch (Exception ex)
+          //  {
+           //     return 1;
+           // }
             try
             {
-                string sql = "Select max(" + column + ") from " + tblnm;
+                int []maxno;
+                 string sql = "Select " +column + " from " + tblnm;
                 da = new MySqlDataAdapter(sql, con);
                 ds = new DataSet();
                 da.Fill(ds, tblnm);
-                if (ds.Tables[tblnm].Rows[0][0].ToString() == "")
-                    return 1;
-                else
+                DataTable dt = ds.Tables[tblnm];
+                DataRow drow =dt.Rows[0];
+                int count = dt.Rows.Count;
+                maxno = new int[count];
+                for (int i = 0; i < count; i++)
                 {
-                    int maxno = Convert.ToInt32(ds.Tables[tblnm].Rows[0][0].ToString());
-                    int id = maxno + 1;
-                    return id;
+                   // string input = ds.Tables[tblnm].Rows[i].ToString();
+                    string input =dt.Rows[i][0].ToString();
+                    int value = 0;
+                    if (Int32.TryParse(String.Join(String.Empty, input.Select(Char.GetNumericValue)), out value))
+                    {
+                        maxno[i] = value;
+                        //....
+                    }
                 }
+                   
+                  int maxIndex = -1;
+                  int maxInt = Int32.MinValue;
+
+    // Modern C# compilers optimize the case where we put array.Length in the condition
+                   for (int i = 0; i < maxno.Length; i++)
+                 {
+                    int value = maxno[i];
+                    if (value > maxInt)
+                    {
+                      maxInt = value;
+                        maxIndex = i;
+                     }
+                   }
+                   string marno = (maxInt+1).ToString();
+                   var marathi = numberreplace.ReplaceNumbers(marno);
+                return marathi;
             }
             catch (Exception ex)
             {
-                return 1;
+                return " ";
             }
+            } 
+          
+       
         }
-    }
+    
 	 
