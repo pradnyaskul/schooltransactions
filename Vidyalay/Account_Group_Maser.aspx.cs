@@ -74,6 +74,15 @@ public partial class Account_Group_Maser : System.Web.UI.Page
         ClearTextBoxes(this.Controls);
 
     }
+<<<<<<< .mine
+    protected void txtGrupcheNaav_TextChanged(object sender, EventArgs e)
+    {
+    }
+    protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+    { 
+    }
+||||||| .r29
+=======
 
     private void load_data()
     {
@@ -135,4 +144,5 @@ public partial class Account_Group_Maser : System.Web.UI.Page
     {
 
     }
+>>>>>>> .r31
 }
