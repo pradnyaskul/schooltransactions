@@ -139,6 +139,23 @@
     </style>
 </asp:Content>
 =======
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+
+        .Common-Buttons 
+        {        
+           margin-left: 20px;
+           width: 90px;  
+           /*color:#333;background-color:#fff;border-color:#ccc*/      
+        }
+
+        .Common-Buttons:hover,.Common-Buttons:focus,.Common-Buttons:active,.Common-Buttons.active,.open .dropdown-toggle.Common-Buttons
+        {color:#333;background-color:#ebebeb;border-color:#adadad}
+        .Common-Buttons:active,.Common-Buttons.active,.open .dropdown-toggle.Common-Buttons
+        {background-image:none}
+
+    </style>
     </asp:Content>
 >>>>>>> .r31
 <asp:Content ID="Content2" ContentPlaceHolderID="AccountContentPlaceHolder" runat="Server">
@@ -269,22 +286,47 @@
         </asp:GridView>
             </td>
 =======
-     <div><span><h1 style="margin-top: 100px;text-align: center;background-color: #CBFCFE;" class="auto-style1">Account Group Master</h1></span></div>
-    <div style="margin-left: 20px; padding-left: 20px;  style="margin-left: 20px; background-color: #CBFCFE;"; style="text-align: left; "><span background-color: #CBFCFE;> अनुक्रमांक </span>
-        <input name="txtgroupno" style="margin-left: 20px"; type="text" height="30" width="160" />
-        <padding-left: 20px;  style="margin-left: 20px"; style="text-align: left; "><span background-color:="" #cbfcfe;="" style="margin-left: 165px; "> छपाई क्रम</span>
-            <input id="Text1" style="margin-left: 20px"; type="text" height="30" width="160" />
-        <%--<input id="SubAccounts" type="checkbox" style="margin-left: 180px; width: 23px; " value=""/><span background-color: #CBFCFE>जमा/खर्च पत्रकात पोटखाती दाखवायची का?</span> --%></br>
-        </div>
-    <div style="margin-left: 23px;  padding-left: 20px;  style="margin-left: 20px; background-color: #CBFCFE;"; style="text-align: left; "><span background-color:="" #cbfcfe;"="" style=" margin-left: 20px;"> ग्रुपचे नाव </span>
-        <input id="txtGroupname" style="margin-left: 20px"; type="text" height="30" width="160"  />
-        <input name="SubAccounts" type="checkbox" style="margin-left: 180px; width: 23px; " value=""/><span background-color: #CBFCFE>जमा/खर्च पत्रकात पोटखाती दाखवायची का?</span>
-        <%--<padding-left: 20px;  style="margin-left: 20px"; style="text-align: left; "><span background-color:="" #cbfcfe;="" style="margin-left: 165px; "> छपाई क्रम</span>
-            <input id="txtprno" style="margin-left: 20px"; type="text" height="25" width="160" /><br />--%>
-           <%-- <input id="SubAccounts" type="checkbox" style="margin-left: 180px; width: 23px; " value=""/><span background-color: #CBFCFE>जमा/खर्च पत्रकात पोटखाती दाखवायची का?</span>--%>
-             <div style="margin-left: 20px;  style="margin-left: 20px; background-color: #CBFCFE;"; style="text-align: left; "><span background-color: #CBFCFE;> मुख्य ग्रुप निवडा </span>
-                 <asp:DropDownList ID="DropDownList1" runat="server" Height="25px" Width="196px">
-                 </asp:DropDownList>
+   
+
+ <div class="container">
+    <div class="row">
+        <div><span><h1 style="margin-top: 100px;text-align: center;background-color: #CBFCFE;" class="auto-style1">Account Group Master</h1></span></div>
+    </div><br />
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="control-label col-sm-2" style="text-align:right;" for="email">अनुक्रमांक :</label>
+      <div class="col-sm-2">
+         <input name="txtgroupno" style="border-radius:0px;" type="text" height="30" width="160" />
+      </div>
+       <label class="control-label col-sm-2" style="text-align:right;" for="pwd">छपाई क्रम :</label>
+      <div class="col-sm-2">          
+        <input id="Text2" style="border-radius:0px;" type="text" height="30" width="160" />
+      </div>      
+    </div>
+      <br/>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" style="text-align:right;" for="email">ग्रुपचे नाव :</label>
+      <div class="col-sm-2">
+         <input id="Text3" style="border-radius:0px;" type="text" height="30" width="160"  />
+      </div>
+       <input name="SubAccounts" class="col-sm-1" type="checkbox" style="margin-left: 105px; width: 23px; " value=""/>
+      <div class="col-sm-4">          
+        <span background-color: #CBFCFE>जमा/खर्च पत्रकात पोटखाती दाखवायची का?</span>
+      </div>   
+    </div>
+      <br />
+    <div class="form-group">
+      <label class="control-label col-sm-2" style="text-align:right;" for="email">मुख्य ग्रुप निवडा :</label>
+      <div class="col-sm-2">
+         <asp:DropDownList ID="DropDownList1" style="border-radius:0px;" runat="server" Height="25px" Width="196px">
+        </asp:DropDownList>
+      </div>
+
+    </div>
+
+      <div class="form-group" style="margin-left:70px;">
+          
 &nbsp;<asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" ShowHeaderWhenEmpty="True" Width="788px">
 >>>>>>> .r31
 
@@ -370,21 +412,29 @@
                     </asp:TemplateField>
                     </Columns>
                 </asp:GridView> 
-        <div> <input id="add" style="margin-left: 45px; width: 70px;"; type="button" value="ADD" />
-              <input id="save" style="margin-left: 45px; width: 70px;"; type="button" value="SAVE" />
-              <input id="modify" style="margin-left: 45px; width: 70px;"; type="button" value="MODIFY" />
-              <input id="cancel" style="margin-left: 45px;  width: 70px;"; type="button" value="CANCEL" />
-              <input id="delete" style="margin-left: 45px; width: 70px;"; type="button" value="DELETE" />
-              <input id="exit" style="margin-left: 45px; width: 70px;"; type="button" value="EXIT" />
+      </div>
 
+      <br />
 
-        </div>
-        <br />
-        
+    <div class="form-group" style="margin-left: 50px;">  
+              <asp:Button ID="add" class="btn-default btn Common-Buttons" runat="server" Text="ADD" />
+              <asp:Button ID="save" class="btn-default btn Common-Buttons" runat="server" Text="SAVE" />
+              <asp:Button ID="modify" class="btn-default btn Common-Buttons" runat="server" Text="MODIFY" />
+              <asp:Button ID="cancel" class="btn-default btn Common-Buttons" runat="server" Text="CANCEL" />
+              <asp:Button ID="delete" class="btn-default btn Common-Buttons" runat="server" Text="DELETE" />
+              <asp:Button ID="exit" class="btn-default btn Common-Buttons" runat="server" Text="EXIT" />
+
+       <br />
+              
     </div>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
-     </div>
+  </form>
+</div>   
+
+<br />
+        
+
+
+
 >>>>>>> .r31
 </asp:Content>
 

@@ -87,9 +87,9 @@ public partial class Account_Group_Maser : System.Web.UI.Page
     private void load_data()
     {
         string acc_headid = Session["AccountHead"].ToString();
-        accgrpobj.Acc_group_id = Request.Form["txtgroupno"];
-        accgrpobj.Acc_group_name = Request.Form["txtGroupname"];
-        accgrpobj.print_no = Request.Form["txtprno"];
+        accgrpobj.Acc_group_id = Convert.ToInt32( Request.Form["txtgroupno"]);
+        accgrpobj.Acc_group_name =Request.Form["txtGroupname"];
+        accgrpobj.print_no =Convert.ToInt32(Request.Form["txtprno"]);
 
         string chkbox = Request.Form["SubAccounts"];
         
@@ -118,7 +118,7 @@ public partial class Account_Group_Maser : System.Web.UI.Page
     }
     protected void btndelete_Click(object sender, EventArgs e)
     {
-        accgrpobj.Acc_group_id = Request.Form["txtgroupno"];
+        accgrpobj.Acc_group_id = Convert.ToInt32(Request.Form["txtgroupno"]);
         accgrpobj.deleterecord();
         LoadGrid();
         ClearTextBoxes(this.Controls);

@@ -23,8 +23,9 @@ public partial class AccountHome : System.Web.UI.MasterPage
         }
     }
 
-    public void fillAccountHead()
-    {
+    public void fillAccountHead() // this function fill the records into grid
+    { 
+        
         if (!this.IsPostBack)
         {
             string selectAccountHead = "SELECT account_head_id,account_head_name FROM account_head";
