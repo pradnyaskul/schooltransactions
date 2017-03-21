@@ -23,7 +23,7 @@ public partial class AccountHome : System.Web.UI.MasterPage
         }
     }
 
-    public void fillAccountHead() // this function fill the records into grid
+    public void fillAccountHead() // this function fill the records into accountHead grid
     { 
         
         if (!this.IsPostBack)
@@ -36,7 +36,10 @@ public partial class AccountHome : System.Web.UI.MasterPage
             ddlAccountHead.DataBind();
             ddlAccountHead.Items.Insert(0, new ListItem("-- प्रमुख खाते निवडा --", "0"));
         }
+        if (1 == 1)
+        { 
         
+        }
     }
     protected void ddlAccountHead_SelectedIndexChanged(object sender, EventArgs e)
     {
